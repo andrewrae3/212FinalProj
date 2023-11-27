@@ -15,8 +15,7 @@ Node::Node(int data, Node* next){
     this->data = data;
     this->next = next;
 }
-//jdaslfdklsssssssslkasdjflsadjflasjdlfasldfjklsadf
-//github
+
 Node::~Node(){
     if(this->next != nullptr){
         delete this->next;
