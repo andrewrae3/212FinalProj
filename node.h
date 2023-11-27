@@ -13,6 +13,3 @@ public:
     Node(int data, Node* next);
     ~Node();
 };
-
-//test
-//another test
