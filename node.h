@@ -1,8 +1,15 @@
-//
-// Created by Benjamin Maguire on 11/27/2023.
-//
+#pragma once
 
-#ifndef INC_212FINALPROJ_NODE_H
-#define INC_212FINALPROJ_NODE_H
+class Node{
+private:
+    int data;
+    Node* next;
 
-#endif //INC_212FINALPROJ_NODE_H
+    friend class LinkedList;
+public:
+    Node();
+    // Overloading
+    Node(int data);
+    Node(int data, Node* next);
+    ~Node();
+};
