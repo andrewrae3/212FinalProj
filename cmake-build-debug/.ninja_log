@@ -1,0 +1,7 @@
+# ninja log v5
+1	65	7228986793329047	CMakeFiles/212FinalProj.dir/node.cpp.obj	80549ccdcd5d2242
+8	279	7228986795476389	CMakeFiles/212FinalProj.dir/linked_list.cpp.obj	60f29c9e6591f1fa
+4	384	7228986796524098	CMakeFiles/212FinalProj.dir/main.cpp.obj	b220e31fbdcf6d3f
+384	463	7228986797278543	212FinalProj.exe	bf512aca4c7ae1c1
+2	360	7228991112563580	CMakeFiles/212FinalProj.dir/main.cpp.obj	b220e31fbdcf6d3f
+360	427	7228991113207265	212FinalProj.exe	bf512aca4c7ae1c1
