@@ -2,20 +2,15 @@
 #define FINLA_MATRIX_H
 
 #include <list>
-class Node{
-    private:
+struct Node{
         int row;
         int col;
         int data;
-
-    public:
-        Node(int row, int col, int data);
 };
 
 class SparseMatrix{
     private:
     std::list<Node> matrix;
-    friend class Node;
 
     public:
     SparseMatrix();
