@@ -5,44 +5,73 @@
 #include <list>
 #include "matrix.h"
 
+
 int main(int argc, char* argv[]) {
     std::ifstream Matrix1(argv[1]), Matrix2(argv[4]);
-    char* row1=argv[2], *col1=argv[3], *row2=argv[5], *col2=(argv[6]), *operation=(argv[7]);
-    std::vector<std::vector<int>> numbers;
+    int Row1 = std::stoi(argv[2]);
+    int Col1 = std::stoi(argv[3]);
+    int Row2 = std::stoi(argv[5]);
+    int Col2 = std::stoi(argv[6]);
+    char operation= *argv[7];
 
-    std::string line;
-    while (std::getline(Matrix1, line)) {
-        std::istringstream iss(line);
+    std::string line1, line2;
+    std::vector<std::vector<int>> MatrixVec1;
+    std::vector<std::vector<int>> MatrixVec2;
+
+    while (std::getline(Matrix1, line1)) {
+        std::istringstream iss(line1);
         int num;
         std::vector<int> lineNumbers;
         while (iss >> num) {
             lineNumbers.push_back(num);
         }
-        numbers.push_back(lineNumbers);
+        MatrixVec1.push_back(lineNumbers);
     }
-    Matrix1.close(); // Close the file
+    Matrix1.close();
 
-    for (size_t i = 0; i < numbers.size(); ++i) {
-        for (size_t j = 0; j < numbers[i].size(); ++j) {
-            std::cout << numbers[i][j] << " ";
+    while (std::getline(Matrix2, line2)) {
+        std::istringstream iss(line2);
+        int num;
+        std::vector<int> rows;
+        while (iss >> num) {
+            rows.push_back(num);
+        }
+        MatrixVec2.push_back(rows);
+    }
+    Matrix2.close();
+
+
+    for (size_t i = 0; i < Row1; ++i) {
+        for (size_t j = 0; j < Col1; ++j) {
+            std::cout << MatrixVec1[i][j] << " ";
         }
         std::cout << std::endl;
     }
 
-    switch (*operation) {
+    for (size_t i = 0; i < Row2; ++i) {
+        for (size_t j = 0; j < Col2; ++j) {
+            std::cout << MatrixVec2[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    switch (operation) {
         case '+':
-            //addition
+            // Addition logic
             break;
         case '-':
-            //subtraction
+            // Subtraction logic
             break;
         case '*':
-            //multiplication
+            // Multiplication logic
             break;
         case '/':
-            //division
+            // Division logic
+            break;
+        default:
+            std::cout << "Invalid operation!" << std::endl;
             break;
     }
-    return 0;
 
+    return 0;
 }
