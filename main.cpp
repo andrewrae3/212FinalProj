@@ -3,7 +3,7 @@
 #include <vector>
 #include <sstream>
 #include <list>
-
+#include "matrix.h"
 
 int main(int argc, char* argv[]) {
     std::ifstream Matrix1(argv[1]), Matrix2(argv[4]);
