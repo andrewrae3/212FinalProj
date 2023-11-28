@@ -7,13 +7,12 @@
 
 int main(int argc, char* argv[]) {
     std::ifstream Matrix1(argv[1]), Matrix2(argv[4]);
-    char* Row1 = argv[2];
-    char* Col1 = argv[3];
-    char* Row2 = argv[5];
-    char* Col2 = argv[6];   
+    int Row1 = std::stoi(argv[2]);
+    int Col1 = std::stoi(argv[3]);
     std::string line1, line2;
     std::vector<std::vector<int>> MatrixVec1;
     std::vector<std::vector<int>> MatrixVec2;
+    
     while (std::getline(Matrix1, line1)) {
         std::istringstream iss(line1);
         int num;
@@ -36,4 +35,11 @@ int main(int argc, char* argv[]) {
     }
     Matrix2.close();
 
+
+    for (size_t i = 0; i < Row1; ++i) {
+        for (size_t j = 0; j < Col1; ++j) {
+            std::cout << MatrixVec1[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
 }
