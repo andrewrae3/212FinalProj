@@ -68,9 +68,6 @@ int main(int argc, char* argv[]) {
         case '/':
             // Division logic
             break;
-        default:
-            std::cout << "Invalid operation!" << std::endl;
-            break;
     }
 
     return 0;
