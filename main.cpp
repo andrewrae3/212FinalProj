@@ -2,7 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
-
+#include <list>
 int main(int argc, char* argv[]) {
     std::ifstream Matrix1(argv[1]), Matrix2(argv[4]);
     char* row1=argv[2], *col1=argv[3], *row2=argv[5], *col2=(argv[6]), *operation=(argv[7]);
