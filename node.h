@@ -2,6 +2,8 @@
 
 class Node{
 private:
+    int row;
+    int col;
     int data;
     Node* next;
 
@@ -9,7 +11,7 @@ private:
 public:
     Node();
     // Overloading
-    Node(int data);
+    Node(int row, int col, int data);
     Node(int data, Node* next);
     ~Node();
 };

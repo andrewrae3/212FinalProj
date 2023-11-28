@@ -6,7 +6,9 @@ Node::Node(){
     this->next = nullptr;
 }
 
-Node::Node(int data){
+Node::Node(int row, int col, int data){
+    this->row = row;
+    this->col = col;
     this->data = data;
     this->next = nullptr;
 }
@@ -21,3 +23,4 @@ Node::~Node(){
         delete this->next;
     }
 }
+
