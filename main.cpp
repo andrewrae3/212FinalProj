@@ -5,44 +5,99 @@
 #include <list>
 #include "matrix.h"
 
-int main(int argc, char* argv[]) {
-    std::ifstream Matrix1(argv[1]), Matrix2(argv[4]);
-    char* row1=argv[2], *col1=argv[3], *row2=argv[5], *col2=(argv[6]), *operation=(argv[7]);
-    std::vector<std::vector<int>> numbers;
 
-    std::string line;
-    while (std::getline(Matrix1, line)) {
-        std::istringstream iss(line);
+int main(int argc, char* argv[]) {
+    std::ifstream Matrix1(argv[1]), Matrix2(argv[5]);
+    int Row1 = std::stoi(argv[2]);
+    int Col1 = std::stoi(argv[3]);
+    int Row2 = std::stoi(argv[6]);
+    int Col2 = std::stoi(argv[7]);
+    char operation= *argv[4];
+
+    std::string line1, line2;
+    std::vector<std::vector<int>> MatrixVec1;
+    std::vector<std::vector<int>> MatrixVec2;
+
+    while (std::getline(Matrix1, line1)) {
+        std::istringstream iss(line1);
         int num;
         std::vector<int> lineNumbers;
         while (iss >> num) {
             lineNumbers.push_back(num);
         }
-        numbers.push_back(lineNumbers);
+        MatrixVec1.push_back(lineNumbers);
     }
-    Matrix1.close(); // Close the file
+    Matrix1.close();
 
-    for (size_t i = 0; i < numbers.size(); ++i) {
-        for (size_t j = 0; j < numbers[i].size(); ++j) {
-            std::cout << numbers[i][j] << " ";
+    while (std::getline(Matrix2, line2)) {
+        std::istringstream iss(line2);
+        int num;
+        std::vector<int> rows;
+        while (iss >> num) {
+            rows.push_back(num);
         }
-        std::cout << std::endl;
+        MatrixVec2.push_back(rows);
+    }
+    Matrix2.close();
+
+    SparseMatrix smatrix1;
+    SparseMatrix smatrix2;
+
+    for (size_t i = 0; i < Row1; ++i) {
+        for (size_t j = 0; j < Col1; ++j) {
+//            std::cout << MatrixVec1[i][j] << " ";
+            smatrix1.insert(i, j, MatrixVec1[i][j]);
+        }
+        //std::cout << std::endl;
     }
 
-    switch (*operation) {
+    for (size_t i = 0; i < Row2; ++i) {
+        for (size_t j = 0; j < Col2; ++j) {
+//            std::cout << MatrixVec2[i][j] << " ";
+            smatrix2.insert(i, j, MatrixVec2[i][j]);
+        }
+        //std::cout << std::endl;
+    }
+
+
+    SparseMatrix result;
+    std::list<Node> temp;
+    switch (operation) {
         case '+':
-            //addition
+            if (Row1 != Row2 || Col1!=Col2){
+                std::cout<< "Invalid Input of Matrix Size"<< std::endl;
+            }
+            temp = result.add(smatrix1,smatrix2,Row1,Col1);
+            for (auto &x: temp) {
+                std::cout << x.row << " " << x.col << " " << x.data << " \n";
+            }
             break;
         case '-':
-            //subtraction
+            if (Row1 != Row2 || Col1!=Col2){
+                std::cout<< "Invalid Input of Matrix Size"<< std::endl;
+            }
+            temp = result.subtract(smatrix1,smatrix2, Row1, Col1);
+            for (auto &x: temp) {
+                std::cout << x.row << " " << x.col << " " << x.data << " \n";
+            }
             break;
-        case '*':
-            //multiplication
+        case '.':
+            if(Col1==Row2) {
+                temp = result.multiply(smatrix1,smatrix2,Row1, Col1, Row2, Col2);
+            }
+            else {
+                std::cout<< "Invalid Input of Matrix Size"<< std::endl;
+            }
+//            for (auto &x: temp) {
+//                std::cout << x.row << " " << x.col << " " << x.data << " \n";
+//            }
             break;
-        case '/':
-            //division
+        case 't':
+            temp = result.transpose(smatrix1, Row1, Col2);
+            for (auto &x: temp) {
+                std::cout << x.row << " " << x.col << " " << x.data << " \n";
+            }
             break;
     }
     return 0;
-
 }
