@@ -1,0 +1,50 @@
+Index: CMakeLists.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+new file mode 100644
+--- /dev/null	(date 1701103543225)
++++ b/CMakeLists.txt	(date 1701103543225)
+@@ -0,0 +1,9 @@
++cmake_minimum_required(VERSION 3.26)
++project(untitled7)
++
++set(CMAKE_CXX_STANDARD 17)
++
++add_executable(212FinalProj main.cpp
++        node.cpp
++        linked_list.cpp
++        linked_list.h)
+Index: node.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/node.cpp b/node.cpp
+new file mode 100644
+--- /dev/null	(date 1701103499506)
++++ b/node.cpp	(date 1701103499506)
+@@ -0,0 +1,3 @@
++//
++// Created by Benjamin Maguire on 11/27/2023.
++//
+Index: node.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/node.h b/node.h
+new file mode 100644
+--- /dev/null	(date 1701104098580)
++++ b/node.h	(date 1701104098580)
+@@ -0,0 +1,8 @@
++//
++// Created by Benjamin Maguire on 11/27/2023.
++//
++
++#ifndef INC_212FINALPROJ_NODE_H
++#define INC_212FINALPROJ_NODE_H
++
++#endif //INC_212FINALPROJ_NODE_H
