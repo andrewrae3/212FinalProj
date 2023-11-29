@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
 
     for (size_t i = 0; i < Row1; ++i) {
         for (size_t j = 0; j < Col1; ++j) {
-            //std::cout << MatrixVec1[i][j] << " ";
+//            std::cout << MatrixVec1[i][j] << " ";
             smatrix1.insert(i, j, MatrixVec1[i][j]);
         }
         //std::cout << std::endl;
@@ -53,19 +53,33 @@ int main(int argc, char* argv[]) {
 
     for (size_t i = 0; i < Row2; ++i) {
         for (size_t j = 0; j < Col2; ++j) {
-            //std::cout << MatrixVec2[i][j] << " ";
+//            std::cout << MatrixVec2[i][j] << " ";
             smatrix2.insert(i, j, MatrixVec2[i][j]);
         }
         //std::cout << std::endl;
     }
 
+
     SparseMatrix result;
+    std::list<Node> temp;
     switch (operation) {
         case '+':
-            result = result.add(smatrix1,smatrix2);
+            if (Row1 != Row2 || Col1!=Col2){
+                std::cout<< "Invalid Input of Matrix Size"<< std::endl;
+            }
+            temp = result.add(smatrix1,smatrix2,Row1,Col1);
+//            for (auto &x: temp) {
+//                std::cout << x.row << " " << x.col << " " << x.data << " \n";
+//            }
             break;
         case '-':
-            result = result.subtract(smatrix1,smatrix2);
+            if (Row1 != Row2 || Col1!=Col2){
+                std::cout<< "Invalid Input of Matrix Size"<< std::endl;
+            }
+            temp = result.subtract(smatrix1,smatrix2, Row1, Col1);
+//            for (auto &x: temp) {
+//                std::cout << x.row << " " << x.col << " " << x.data << " \n";
+//            }
             break;
         case '*':
             result = result.multiply(smatrix1,smatrix2);
@@ -74,6 +88,5 @@ int main(int argc, char* argv[]) {
             result = result.divide(smatrix1,smatrix2);
             break;
     }
-
     return 0;
 }
