@@ -7,12 +7,12 @@
 
 
 int main(int argc, char* argv[]) {
-    std::ifstream Matrix1(argv[1]), Matrix2(argv[4]);
+    std::ifstream Matrix1(argv[1]), Matrix2(argv[5]);
     int Row1 = std::stoi(argv[2]);
     int Col1 = std::stoi(argv[3]);
-    int Row2 = std::stoi(argv[5]);
-    int Col2 = std::stoi(argv[6]);
-    char operation= *argv[7];
+    int Row2 = std::stoi(argv[6]);
+    int Col2 = std::stoi(argv[7]);
+    char operation= *argv[4];
 
     std::string line1, line2;
     std::vector<std::vector<int>> MatrixVec1;
@@ -68,25 +68,61 @@ int main(int argc, char* argv[]) {
                 std::cout<< "Invalid Input of Matrix Size"<< std::endl;
             }
             temp = result.add(smatrix1,smatrix2,Row1,Col1);
-//            for (auto &x: temp) {
-//                std::cout << x.row << " " << x.col << " " << x.data << " \n";
-//            }
+            for (auto &x: temp) {
+                std::cout << x.row << " " << x.col << " " << x.data << " \n";
+            }
             break;
         case '-':
             if (Row1 != Row2 || Col1!=Col2){
                 std::cout<< "Invalid Input of Matrix Size"<< std::endl;
             }
             temp = result.subtract(smatrix1,smatrix2, Row1, Col1);
+            for (auto &x: temp) {
+                std::cout << x.row << " " << x.col << " " << x.data << " \n";
+            }
+            break;
+        case '.':
+            if(Col1==Row2) {
+                temp = result.multiply(smatrix1,smatrix2, Row1, Col2);
+            }
+            else {
+                std::cout<< "Invalid Input of Matrix Size"<< std::endl;
+            }
+            for (auto &x: temp) {
+                std::cout << x.row << " " << x.col << " " << x.data << " \n";
+            }
+            break;
+        case 't':
+            temp = result.transpose(smatrix1, Row1, Col2);
+            for (auto &x: temp) {
+                std::cout << x.row << " " << x.col << " " << x.data << " \n";
+            }
+            break;
+//        case 'd':
+//            if (Row1 == Col1) {
+//                if (Row1 > 2) {
+//                    std::cout << "Matrix is too large. Please try with a smaller matrix." << std::endl;
+//                } else {
+//                    temp = result.determinant(smatrix1, Row1, Col1);
+//                }
+//            } else if (Row1 != Col1){
+//                std::cout << "Matrix has to be square." << std::endl;
+//            }
+////            std::cout << temp << std::endl;
+//            break;
+//        case 'i':
+//            temp = result.inverse(smatrix1, Row1, Col2);
+//            break;
+//        default:
+//            if(Col1==Row2) {
+//                temp = result.power(smatrix1, Row1, Col2, operation);            }
+//            else {
+//                std::cout<< "Invalid Input of Matrix Size"<< std::endl;
+//            }
 //            for (auto &x: temp) {
 //                std::cout << x.row << " " << x.col << " " << x.data << " \n";
 //            }
-            break;
-        case '*':
-            result = result.multiply(smatrix1,smatrix2);
-            break;
-        case '/':
-            result = result.divide(smatrix1,smatrix2);
-            break;
+//            break;
     }
     return 0;
 }
