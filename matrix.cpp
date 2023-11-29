@@ -29,6 +29,6 @@ SparseMatrix SparseMatrix::divide(SparseMatrix &matrix1, SparseMatrix &matrix2){
     
 }
 
-void SparseMatrix::print(SparseMatrix &matrix){
-    
+void SparseMatrix::print(){
+
 }

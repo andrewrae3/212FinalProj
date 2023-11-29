@@ -20,7 +20,7 @@ class SparseMatrix{
     SparseMatrix subtract(SparseMatrix &matrix1, SparseMatrix &matrix2);
     SparseMatrix multiply(SparseMatrix &matrix1, SparseMatrix &matrix2);
     SparseMatrix divide(SparseMatrix &matrix1, SparseMatrix &matrix2);
-    void print(SparseMatrix &matrix);
+    void print();
 
 };
 
