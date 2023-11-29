@@ -3,6 +3,7 @@
 #include <vector>
 #include <sstream>
 #include <list>
+#include "matrix.h"
 
 
 int main(int argc, char* argv[]) {
@@ -12,8 +13,9 @@ int main(int argc, char* argv[]) {
     std::string line1, line2;
     std::vector<std::vector<int>> MatrixVec1;
     std::vector<std::vector<int>> MatrixVec2;
-    
+
     while (std::getline(Matrix1, line1)) {
+        std::cout << line1 << std::endl;
         std::istringstream iss(line1);
         int num;
         std::vector<int> lineNumbers;
@@ -36,10 +38,21 @@ int main(int argc, char* argv[]) {
     Matrix2.close();
 
 
-    for (size_t i = 0; i < Row1; ++i) {
-        for (size_t j = 0; j < Col1; ++j) {
-            std::cout << MatrixVec1[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
+//    for (int i = 0; i < Row1; ++i) {
+//        for (int j = 0; j < Col1; ++j) {
+//            std::cout << MatrixVec1[i][j] << " ";
+//        }
+//        std::cout << std::endl;
+//    }
+
+SparseMatrix matrix;
+    matrix.MatrixToLL(MatrixVec1);
+
+for(int i = 0; i < counter; i++){
+    std::cout<<list[i].row
 }
+
+
+}
+
+
