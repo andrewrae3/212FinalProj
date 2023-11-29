@@ -109,6 +109,8 @@ int SparseMatrix::getElement(int row, int col) {
     return 0;
 }
 
-void SparseMatrix::print(){
-
+void SparseMatrix::print(std::list<Node> &matrix){
+    for (const auto& node : matrix) {
+        std::cout << "Row: " << node.row << ", Col: " << node.col << ", Value: " << node.data << std::endl;
+    }
 }
