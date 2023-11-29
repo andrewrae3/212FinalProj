@@ -44,13 +44,11 @@ int main(int argc, char* argv[]) {
 //        }
 //        std::cout << std::endl;
 //    }
-
+    
 SparseMatrix matrix;
     matrix.MatrixToLL(MatrixVec1);
+    matrix.printList();
 
-for(int i = 0; i < counter; i++){
-    std::cout<<list[i].row
-}
 
 
 }
