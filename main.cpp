@@ -68,18 +68,14 @@ int main(int argc, char* argv[]) {
                 std::cout<< "Invalid Input of Matrix Size"<< std::endl;
             }
             temp = result.add(smatrix1,smatrix2,Row1,Col1);
-            for (auto &x: temp) {
-                std::cout << x.row << " " << x.col << " " << x.data << " \n";
-            }
+            result.print(temp);
             break;
         case '-':
             if (Row1 != Row2 || Col1!=Col2){
                 std::cout<< "Invalid Input of Matrix Size"<< std::endl;
             }
             temp = result.subtract(smatrix1,smatrix2, Row1, Col1);
-            for (auto &x: temp) {
-                std::cout << x.row << " " << x.col << " " << x.data << " \n";
-            }
+            result.print(temp);
             break;
         case '.':
             if(Col1==Row2) {
@@ -88,15 +84,11 @@ int main(int argc, char* argv[]) {
             else {
                 std::cout<< "Invalid Input of Matrix Size"<< std::endl;
             }
-            for (auto &x: temp) {
-                std::cout << x.row << " " << x.col << " " << x.data << " \n";
-            }
+            result.print(temp);
             break;
         case 't':
             temp = result.transpose(smatrix1, Row1, Col2);
-            for (auto &x: temp) {
-                std::cout << x.row << " " << x.col << " " << x.data << " \n";
-            }
+            result.print(temp);
             break;
 //        case 'd':
 //            if (Row1 == Col1) {
