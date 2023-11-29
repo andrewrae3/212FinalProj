@@ -3,24 +3,25 @@
 
 #include <list>
 struct Node{
-        int row;
-        int col;
-        int data;
+    int row;
+    int col;
+    int data;
 };
 
 class SparseMatrix{
-    private:
+private:
     std::list<Node> matrix;
 
-    public:
+public:
     SparseMatrix();
     SparseMatrix(int row, int col, int data);
     void insert(int row, int col, int data);
-    void add(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void subtract(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void multiply(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void divide(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void print(std::list<Node> &matrix);
+    int getElement(int row, int col);
+    std::list<Node> add(SparseMatrix &matrix1, SparseMatrix &matrix2, int row, int col);
+    std::list<Node> subtract(SparseMatrix &matrix1, SparseMatrix &matrix2, int row, int col);
+    std::list<Node> multiply(SparseMatrix &matrix1, SparseMatrix &matrix2, int row1, int col1, int row2, int col2);
+    std::list<Node> transpose(SparseMatrix &matrix1, int row1, int col1);
+    void print();
 
 };
 
