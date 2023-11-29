@@ -14,13 +14,16 @@ private:
 
 public:
     SparseMatrix();
-    int getsize();
-  void MatrixToLL(std::vector<std::vector<int>>MatrixVec1);
-  void printList();
-    void add(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void subtract(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void multiply(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void divide(std::list<Node> &matrix1, std::list<Node> &matrix2);
+    SparseMatrix(int row, int col, int data);
+    void insert(int row, int col, int data);
+    int getElement(int row, int col);
+    std::list<Node> add(SparseMatrix &matrix1, SparseMatrix &matrix2, int row, int col);
+    std::list<Node> subtract(SparseMatrix &matrix1, SparseMatrix &matrix2, int row, int col);
+    std::list<Node> multiply(SparseMatrix &matrix1, SparseMatrix &matrix2, int row1, int col2);
+    std::list<Node> transpose(SparseMatrix &matrix1, int row1, int col1);
+//    std::list<Node> power(SparseMatrix &matrix1, int row1, int col1, int op);
+//    std::list<Node> inverse(SparseMatrix &matrix1, int row1, int col1);
+//    std::list<Node> determinant(SparseMatrix &matrix1, int row1, int col1);
     void print(std::list<Node> &matrix);
 
 };
