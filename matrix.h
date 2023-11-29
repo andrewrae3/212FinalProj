@@ -16,11 +16,11 @@ class SparseMatrix{
     SparseMatrix();
     SparseMatrix(int row, int col, int data);
     void insert(int row, int col, int data);
-    void add(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void subtract(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void multiply(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void divide(std::list<Node> &matrix1, std::list<Node> &matrix2);
-    void print(std::list<Node> &matrix);
+    SparseMatrix add(SparseMatrix &matrix1, SparseMatrix &matrix2);
+    SparseMatrix subtract(SparseMatrix &matrix1, SparseMatrix &matrix2);
+    SparseMatrix multiply(SparseMatrix &matrix1, SparseMatrix &matrix2);
+    SparseMatrix divide(SparseMatrix &matrix1, SparseMatrix &matrix2);
+    void print(SparseMatrix &matrix);
 
 };
 

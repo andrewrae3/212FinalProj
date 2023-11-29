@@ -40,33 +40,38 @@ int main(int argc, char* argv[]) {
     }
     Matrix2.close();
 
+    SparseMatrix smatrix1;
+    SparseMatrix smatrix2;
 
     for (size_t i = 0; i < Row1; ++i) {
         for (size_t j = 0; j < Col1; ++j) {
-            std::cout << MatrixVec1[i][j] << " ";
+            //std::cout << MatrixVec1[i][j] << " ";
+            smatrix1.insert(i, j, MatrixVec1[i][j]);
         }
-        std::cout << std::endl;
+        //std::cout << std::endl;
     }
 
     for (size_t i = 0; i < Row2; ++i) {
         for (size_t j = 0; j < Col2; ++j) {
-            std::cout << MatrixVec2[i][j] << " ";
+            //std::cout << MatrixVec2[i][j] << " ";
+            smatrix2.insert(i, j, MatrixVec2[i][j]);
         }
-        std::cout << std::endl;
+        //std::cout << std::endl;
     }
 
+    SparseMatrix result;
     switch (operation) {
         case '+':
-            // Addition logic
+            result = result.add(smatrix1,smatrix2);
             break;
         case '-':
-            // Subtraction logic
+            result = result.subtract(smatrix1,smatrix2);
             break;
         case '*':
-            // Multiplication logic
+            result = result.multiply(smatrix1,smatrix2);
             break;
         case '/':
-            // Division logic
+            result = result.divide(smatrix1,smatrix2);
             break;
     }
 
