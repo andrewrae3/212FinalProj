@@ -15,6 +15,20 @@ void SparseMatrix::insert(int row, int col, int data){
     this->matrix.push_back(node);
 }
 
+void SparseMatrix::MatrixToLL(std::vector<std::vector<int>>MatrixVec1){
+    Node myNode;
+    for (int i = 0; i < MatrixVec1.size(); ++i) {
+        for (int j = 0; j < MatrixVec1[i].size(); ++j) {
+            if(MatrixVec1[i][j] != 0){
+                myNode.row = i;
+                myNode.col = j;
+                myNode.data = MatrixVec1[i][j];
+                matrix.push_back(myNode);
+            }
+        }
+    }
+}
+
 std::list<Node> SparseMatrix::add(SparseMatrix &matrix1, SparseMatrix &matrix2, int row, int col){
     for (int i = 0; i <= row; i++) {
         for (int j = 0; j <= col; j++) {
