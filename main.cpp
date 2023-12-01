@@ -85,6 +85,7 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM 
                 case 1: // Multiply button clicked
                     // Perform multiplication operation
                     {
+                        result.clear();
                         std::vector<std::vector<int>> MatrixVec1;
                         std::vector<std::vector<int>> MatrixVec2;
                         SaveMatrixFromGUI(editMatrix1, MatrixVec1);
@@ -127,6 +128,7 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM 
                 case 2: // Add button clicked
                     // Perform addition operation
                     {
+                        result.clear();
                         std::vector<std::vector<int>> MatrixVec1;
                         std::vector<std::vector<int>> MatrixVec2;
                         SaveMatrixFromGUI(editMatrix1, MatrixVec1);
@@ -158,6 +160,7 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM 
                 case 3: // Subtract button clicked
                     // Perform subtraction operation
                     {
+                        result.clear();
                         std::vector<std::vector<int>> MatrixVec1;
                         std::vector<std::vector<int>> MatrixVec2;
                         SaveMatrixFromGUI(editMatrix1, MatrixVec1);
@@ -189,6 +192,7 @@ LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM 
                 case 4: // Transpose button clicked
                     // Perform transpose operation
                     {
+                        result.clear();
                         std::vector<std::vector<int>> MatrixVec1;
                         std::vector<std::vector<int>> MatrixVec2;
                         SaveMatrixFromGUI(editMatrix1, MatrixVec1);
