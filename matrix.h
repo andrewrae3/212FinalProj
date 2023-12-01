@@ -19,9 +19,14 @@ public:
     int getElement(int row, int col);
     std::list<Node> add(SparseMatrix &matrix1, SparseMatrix &matrix2, int row, int col);
     std::list<Node> subtract(SparseMatrix &matrix1, SparseMatrix &matrix2, int row, int col);
-    SparseMatrix multiply(SparseMatrix &matrix1, SparseMatrix &matrix2);
-    SparseMatrix divide(SparseMatrix &matrix1, SparseMatrix &matrix2);
-    void print();
+    std::list<Node> multiply(SparseMatrix &matrix1, SparseMatrix &matrix2, int row1, int col2);
+    std::list<Node> transpose(SparseMatrix &matrix1, int row1, int col1);
+//    std::list<Node> power(SparseMatrix &matrix1, int row1, int col1, int op);
+//    std::list<Node> inverse(SparseMatrix &matrix1, int row1, int col1);
+//    std::list<Node> determinant(SparseMatrix &matrix1, int row1, int col1);
+    void clear() {
+        matrix.clear(); // Clears the content of the list 'matrix'
+    }
 
 };
 
