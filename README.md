@@ -1,4 +1,4 @@
-#212FinalProj
+# 212FinalProj
 How to run our program:
 
 using CLA's, our program will take in 7 inputs ;
