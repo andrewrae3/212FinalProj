@@ -253,7 +253,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
             "Matrix Operations",
             WS_OVERLAPPEDWINDOW,
             CW_USEDEFAULT, CW_USEDEFAULT,
-            800, 400,
+            825, 400,
             NULL, NULL, hInstance, NULL);
     
     ShowWindow(hwnd, nCmdShow);
