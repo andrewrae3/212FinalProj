@@ -2,7 +2,7 @@
 
 For our final project, we implemented sparse matrices with linked lists. We also implemented a GUI to turn it into somewhat of a matrix calculator. 
 
-Please note that because the GUI was made using the windows.h library, a windows computer is needed to run our code.
+Please note that because the GUI was made using the windows.h library, a windows computer is needed to run our code. Also note for some reason (we think it has to do with the CMake) currently our code only works on CLion.
 
 To run our code, you need to add windows.h to your external libraries. 
 
