@@ -24,9 +24,7 @@ To run our code:
 ./MatrixCalculator 
 ```
 
-This should bring up our GUI, which has two boxes, Matrix 1 and Matrix 2 to input the desired matrices. 
-
-Below is a picture of the GUI:
+This should bring up our GUI, which has two boxes, Matrix 1 and Matrix 2 to input the desired matrices. Below is a picture of the GUI:
 
 ![image](https://github.com/andrewrae3/212FinalProj/blob/1ca107973204595ee55dd8d2ba85dc930461f355/Images/Screenshot%202023-12-04%20142838.png)
 
@@ -38,9 +36,7 @@ Each element in the matrice should be separated by a whitespace, eg.
 45 3 4 1
 ```
 
-Once you have input the desired matrices, you can perform one of the operations listed in the GUI: Addition, Subtraction Multiplication, or transpose a matrix. Note that transpose will only transpose the matrix input into Matrix 1. 
-
-Below is an example of matrix additon:
+Once you have input the desired matrices, you can perform one of the operations listed in the GUI: Addition, Subtraction Multiplication, or transpose a matrix. Note that transpose will only transpose the matrix input into Matrix 1. Below is an example of matrix additon:
 
 ![image](https://github.com/andrewrae3/212FinalProj/blob/05cba4ae2a5292a54530b4eedbee1dbd046c6947/Images/exampleaddition.png)
 
