@@ -24,7 +24,9 @@ public:
 //    std::list<Node> power(SparseMatrix &matrix1, int row1, int col1, int op);
 //    std::list<Node> inverse(SparseMatrix &matrix1, int row1, int col1);
 //    std::list<Node> determinant(SparseMatrix &matrix1, int row1, int col1);
-    void print();
+    void clear() {
+        matrix.clear(); // Clears the content of the list 'matrix'
+    }
 
 };
 

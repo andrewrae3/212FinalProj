@@ -11,8 +11,10 @@ SparseMatrix::SparseMatrix(int row, int col, int data){
 }
 
 void SparseMatrix::insert(int row, int col, int data){
-    Node node = {row, col, data};
-    this->matrix.push_back(node);
+   if (data!=0) {
+        Node node = {row, col, data};
+        this->matrix.push_back(node);
+    }
 }
 
 std::list<Node> SparseMatrix::add(SparseMatrix &matrix1, SparseMatrix &matrix2, int row, int col){
@@ -107,8 +109,4 @@ int SparseMatrix::getElement(int row, int col) {
         }
     }
     return 0;
-}
-
-void SparseMatrix::print(){
-
 }
