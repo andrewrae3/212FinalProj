@@ -35,7 +35,7 @@ After choosing an operation, the output will appear in the output box, showing t
 
 <h2 align = "center" > For Mac </h2>
 
-To run our code on Mac, there will be no GUI. Instead, input will be taken in through text files and CLA. Create 2 text files. Each text file will contain a matrix for input. Each element should be separated by whitespace.
+To run our code on Mac, there will be no GUI. Instead, input will be taken in through text files and CLA. Note that you have to enter the 'Iterations' directory. Create 2 text files. Each text file will contain a matrix for input. Each element should be separated by whitespace.
 For example:
 
 ```
