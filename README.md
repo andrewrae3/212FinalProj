@@ -4,6 +4,8 @@ For our final project, we implemented sparse matrices with linked lists. We also
 
 Please note that because the GUI was made using the windows.h library, a windows computer is needed to run our code. Also note for some reason (we think it has to do with the CMake) currently our code only works on CLion.
 
+<h2 align = "center" > For Windows </h2>
+
 To run the MAc version of our code, please refer below.
 
 
@@ -31,6 +33,7 @@ Once you have input the desired matrices, you can perform one of the operations 
 
 After choosing an operation, the output will appear in the output box, showing the row and column of each element of the output. After each operatio is performed, click the clear button to reset the calculator. 
 
+<h2 align = "center" > For Mac </h2>
 
 To run our code on Mac, there will be no GUI. Instead, input will be taken in through text files and CLA. Create 2 text files. Each text file will contain a matrix for input. Each element should be separated by whitespace.
 For example:
