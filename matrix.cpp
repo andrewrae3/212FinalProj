@@ -65,30 +65,6 @@ std::list<Node> SparseMatrix::multiply(SparseMatrix &matrix1, SparseMatrix &matr
     return matrix;
 }
 
-//std::list<Node> SparseMatrix::power(SparseMatrix &matrix1, int row1, int col1, int op) {
-//
-//}
-//
-//std::list<Node> SparseMatrix::inverse(SparseMatrix &matrix1, int row1, int col1) {
-//
-//}
-//std::list<Node> SparseMatrix::determinant(SparseMatrix &matrix1, int row1, int col1) {
-//    if (row1 == 1) {
-//        int det = matrix1.getElement(0, 0);
-////        std::cout << "Determinant of 1x1 matrix: " << det << std::endl;
-//        return matrix;
-//    } else if (row1 == 2) {
-//        int a = matrix1.getElement(0, 0);
-//        int b = matrix1.getElement(0, 1);
-//        int c = matrix1.getElement(1, 0);
-//        int d = matrix1.getElement(1, 1);
-//
-//        int det = a * d - b * c;
-////        std::cout << "Determinant of 2x2 matrix: " << det << std::endl;
-//        return matrix;
-//    }
-//}
-
 std::list<Node> SparseMatrix::transpose(SparseMatrix &matrix1, int row1, int col1){
     for (int j = 0; j <= col1; j++) {
         for (int i = 0; i <= row1; i++) {
