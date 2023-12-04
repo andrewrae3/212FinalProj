@@ -40,7 +40,9 @@ Once you have input the desired matrices, you can perform one of the operations 
 
 ![image](https://github.com/andrewrae3/212FinalProj/blob/05cba4ae2a5292a54530b4eedbee1dbd046c6947/Images/exampleaddition.png)
 
-If the operation cannot be performed because of invalid matrix dimensions, an error message will appear. 
+If the operation cannot be performed because of invalid matrix dimensions, an error message will appear. Below is an error message for multiplication:
+
+![image](https://github.com/andrewrae3/212FinalProj/blob/c13557f4d481bcadbe855b5a7bdf5b98c5a12da9/Images/errormsg.png)
 
 After choosing an operation, the output will appear in the output box, showing the row and column of each element of the output. After each operation is performed, click the clear button to reset the calculator. 
 
