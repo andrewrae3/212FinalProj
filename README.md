@@ -2,12 +2,11 @@
 
 For our final project, we implemented sparse matrices with linked lists. We also implemented a GUI to turn it into somewhat of a matrix calculator. 
 
-Please note that because the GUI was made using the windows.h library, a windows computer is needed to run our code. Also note for some reason (we think it has to do with the CMake) currently our code only works on CLion.
+Please note that because the GUI was made using the windows.h library, a windows computer is needed to run our code. Also note for some reason (we think it has to do with the CMake) currently our code only works on CLion. 
 
 <h2 align = "center" > For Windows </h2>
 
-To run the MAc version of our code, please refer below.
-
+Before you can compile the code, you must add matrix.cpp to the CMake. To do this, in Clion open the project, double click on matrix.cpp, and it should bring up the class file. In a yellow bar above the code, you will see a popup that says "This file does not belong to any project target; code insight features might not work properly." To the right in the popup, in blue it says "Add to CMake Project". Click this, then click OK. Now the code will compile correctly. To run our code, you can simply press the Run button in the toolbar. Otherwise, you can run the following terminal commands.
 
 To compile our code:
 
@@ -35,7 +34,7 @@ After choosing an operation, the output will appear in the output box, showing t
 
 <h2 align = "center" > For Mac </h2>
 
-To run our code on Mac, there will be no GUI. Instead, input will be taken in through text files and CLA. Note that you have to enter the 'Iterations' directory. Create 2 text files. Each text file will contain a matrix for input. Each element should be separated by whitespace.
+To run our code on Mac, there will be no GUI. Instead, input will be taken in through text files and CLA. Note that you have to enter the 'Iterations' directory. In the cmake-build-debug directory, you will see two text files, matrix1.txt and matrix2.txt. The text files will contain the matrices that you wish to input. When inputting a matrix, each element should be separated by whitespace.
 For example:
 
 ```
