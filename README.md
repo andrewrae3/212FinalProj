@@ -2,7 +2,7 @@
 
 For our final project, we implemented sparse matrices with linked lists. We also implemented a GUI to turn it into somewhat of a matrix calculator. 
 
-Please note that because the GUI was made using the windows.h library, a windows computer is needed to run our code. Also note for some reason (we think it has to do with the CMake) currently our code only works on CLion. 
+Please note that because the GUI was made using the windows.h library, a windows computer is needed to run our code. Also note for some reason (we think it has to do with the CMake) currently our code for the GUI only works on CLion. 
 
 Also note that each matrix operation has specific dimension restrictions for the matrix inputs. For addition and subtraction, the matrices inputted have to be of the same dimensions. For example if matrix1 is a 3x4 matrix, matrix2 must also be a 3x4 matrix. For multiplication, the number of columns in the first matrix must be equal to the number of rows in the second matrix. For example, given matrix1 of size 3x4, matrix2 must be 4x5 matrix. 
 
