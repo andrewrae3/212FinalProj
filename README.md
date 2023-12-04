@@ -1,4 +1,4 @@
-# 212FinalProj
+<h2 align = "center" > CSC212 Final Project </h2>
 
 For our final project, we implemented sparse matrices with linked lists. We also implemented a GUI to turn it into somewhat of a matrix calculator. 
 
