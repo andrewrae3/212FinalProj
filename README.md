@@ -10,7 +10,7 @@ Also note that each matrix operation has specific dimension restrictions for the
 
 Before you can compile the code, you must add matrix.cpp to the CMake. To do this, in Clion open the project, double click on matrix.cpp, and it should bring up the class file. In a yellow bar above the code, you will see a popup that says "This file does not belong to any project target; code insight features might not work properly." To the right in the popup, in blue it says "Add to CMake Project". Click this, then click OK. There is an image below showing the add to Cmake Project. Now the code will compile correctly. To run our code, you can simply press the Run button in the toolbar. Otherwise, you can run the following terminal commands.
 
-![image](https://github.com/andrewrae3/212FinalProj/blob/3f3edb0a96475b9d688cc2577ba044934de84d9d/image.png)
+![image](https://github.com/andrewrae3/212FinalProj/blob/e54ee20a2d7efca614e568807c26306e31159836/Images/cmake.png)
 
 To compile our code:
 
