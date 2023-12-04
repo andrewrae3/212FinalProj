@@ -4,6 +4,8 @@ For our final project, we implemented sparse matrices with linked lists. We also
 
 Please note that because the GUI was made using the windows.h library, a windows computer is needed to run our code. Also note for some reason (we think it has to do with the CMake) currently our code only works on CLion. 
 
+Also note that each matrix operation has specific dimension restrictions for the matrix inputs. For addition and subtraction, the matrices inputted have to be of the same dimensions. For example if matrix1 is a 3x4 matrix, matrix2 must also be a 3x4 matrix. For multiplication, the number of columns in the first matrix must be equal to the number of rows in the second matrix. For example, given matrix1 of size 3x4, matrix2 must be 4x5 matrix. 
+
 <h2 align = "center" > For Windows </h2>
 
 Before you can compile the code, you must add matrix.cpp to the CMake. To do this, in Clion open the project, double click on matrix.cpp, and it should bring up the class file. In a yellow bar above the code, you will see a popup that says "This file does not belong to any project target; code insight features might not work properly." To the right in the popup, in blue it says "Add to CMake Project". Click this, then click OK. Now the code will compile correctly. To run our code, you can simply press the Run button in the toolbar. Otherwise, you can run the following terminal commands.
@@ -52,7 +54,19 @@ g++ main1.cpp matrix1.cpp -o matrix
 To run our code:
 
 ```
-./matrix matrix1.txt m1 n1 matrix2.txt m2 n2
+./matrix matrix1.txt m1 n1 operation matrix2.txt m2 n2 
 ```
 
-Where m1 n1 is the number of rows and columns in matrix1, and m2 n2 is the number of rows and columns in matrix2.
+Where m1 n1 is the number of rows and columns in matrix1, m2 n2 is the number of rows and columns in matrix2, and operation is the matrix operation you wish to perform. 
+
+Valid operations are:
+
+For addition: +
+
+For subtraction: -
+
+For multiplication: .
+
+For transpose: t
+
+Note that transpose will only transpose the input of matrix1.
