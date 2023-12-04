@@ -34,7 +34,13 @@ Each element in the matrice should be separated by a whitespace, eg.
 45 3 4 1
 ```
 
-Once you have input the desired matrices, you can perform one of the operations listed in the GUI: Addition, Subtraction Multiplication, or transpose a matrix. Note that transpose will only transpose the matrix input into Matrix 1. If the operation cannot be performed because of invalid matrix dimensions, an error message will appear. 
+Once you have input the desired matrices, you can perform one of the operations listed in the GUI: Addition, Subtraction Multiplication, or transpose a matrix. Note that transpose will only transpose the matrix input into Matrix 1. 
+
+Below is an example of matrix additon:
+
+![image](https://github.com/andrewrae3/212FinalProj/blob/05cba4ae2a5292a54530b4eedbee1dbd046c6947/Images/exampleaddition.png)
+
+If the operation cannot be performed because of invalid matrix dimensions, an error message will appear. 
 
 After choosing an operation, the output will appear in the output box, showing the row and column of each element of the output. After each operation is performed, click the clear button to reset the calculator. 
 
