@@ -58,7 +58,7 @@ g++ main1.cpp matrix1.cpp -o matrix
 To run our code:
 
 ```
-./matrix filename1 m1 n1 operation filename2.txt m2 n2 
+./matrix filename1.txt m1 n1 operation filename2.txt m2 n2 
 ```
 
 Where filename1.txt and filename2.txt are the names of the text files taken in as input, m1 n1 is the number of rows and columns of the matrix in the first input file, m2 n2 is the number of rows and columns of the matrix in the second input file, and operation is the matrix operation you wish to perform. 
