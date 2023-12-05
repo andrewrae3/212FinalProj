@@ -24,10 +24,8 @@ To run our code:
 ./MatrixCalculator 
 ```
 
-This should bring up our GUI, which has two boxes, Matrix 1 and Matrix 2 to input the desired matrices. Below is a picture of the GUI:
-
+This should bring up our GUI, which has two boxes, Matrix 1 and Matrix 2 to input the desired matrices. Below is a picture of the GUI.
 ![image](https://github.com/andrewrae3/212FinalProj/blob/1ca107973204595ee55dd8d2ba85dc930461f355/Images/Screenshot%202023-12-04%20142838.png)
-
 Each element in the matrice should be separated by a whitespace, eg.
 
 ```
@@ -36,19 +34,13 @@ Each element in the matrice should be separated by a whitespace, eg.
 45 3 4 1
 ```
 
-Once you have input the desired matrices, you can perform one of the operations listed in the GUI: Addition, Subtraction Multiplication, or transpose a matrix. Note that transpose will only transpose the matrix input into Matrix 1. Below is an example of matrix additon:
+Once you have input the desired matrices, you can perform one of the operations listed in the GUI: Addition, Subtraction Multiplication, or transpose a matrix. Note that transpose will only transpose the matrix input into Matrix 1. If the operation cannot be performed because of invalid matrix dimensions, an error message will appear. 
 
-![image](https://github.com/andrewrae3/212FinalProj/blob/05cba4ae2a5292a54530b4eedbee1dbd046c6947/Images/exampleaddition.png)
-
-If the operation cannot be performed because of invalid matrix dimensions, an error message will appear. Below is an error message for multiplication:
-
-![image](https://github.com/andrewrae3/212FinalProj/blob/c13557f4d481bcadbe855b5a7bdf5b98c5a12da9/Images/errormsg.png)
-
-After choosing an operation, the output will appear in the output box, showing the row and column of each element of the output. After each operation is performed, click the clear button to reset the calculator. 
+After choosing an operation, the output will appear in the output box, showing the row and column of each element of the output. After each operatio is performed, click the clear button to reset the calculator. 
 
 <h2 align = "center" > For Mac </h2>
 
-To run our code on Mac, there will be no GUI. Instead, input will be taken in through text files and CLA. Note that you have to enter the 'Iterations' directory. In the cmake-build-debug directory, you will see two text files, matrix1.txt and matrix2.txt. The text files will contain the matrices that you wish to input. When inputting a matrix, each element should be separated by whitespace.
+To run our code on Mac, there will be no GUI. Instead, input will be taken in through text files and CLA. Note that you have to enter the 'Iterations' directory, after downloading the project files. In the cmake-build-debug directory, you will see a list of text files that contain example matrices. The text files will contain the matrices that you wish to input. When inputting a matrix, each element should be separated by whitespace.
 For example:
 
 ```
@@ -66,10 +58,15 @@ g++ main1.cpp matrix1.cpp -o matrix
 To run our code:
 
 ```
-./matrix matrix1.txt m1 n1 operation matrix2.txt m2 n2 
+./matrix filename1 m1 n1 operation filename2.txt m2 n2 
 ```
 
-Where m1 n1 is the number of rows and columns in matrix1, m2 n2 is the number of rows and columns in matrix2, and operation is the matrix operation you wish to perform. 
+Where filename1.txt and filename2.txt are the names of the text files taken in as input, m1 n1 is the number of rows and columns of the matrix in the first input file, m2 n2 is the number of rows and columns of the matrix in the second input file, and operation is the matrix operation you wish to perform. 
+
+For example:
+```
+./matrix MatrixAdd1.txt 5 4 + MatrixAdd2.txt 5 4
+```
 
 Valid operations are:
 
